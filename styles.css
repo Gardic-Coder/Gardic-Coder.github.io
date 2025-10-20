@@ -1,0 +1,80 @@
+/* Paleta para modo claro */
+.light-mode {
+  --background-color: #F8F9FA;
+  --card-color: #FFFFFF;
+  --text-color: #212529;
+  --text-accent: #495057;
+  --accent-color: #007BFF;
+  --border-color: #CED4DA;
+  --shadow-color: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Paleta para modo oscuro */
+.dark-mode {
+  --background-color: #1A1A1A;
+  --card-color: #2A2A2A;
+  --text-color: #E0E0E0;
+  --text-accent: #B0B0B0;
+  --accent-color: #800020;
+  --border-color: #404040;
+  --shadow-color: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  main, header {
+
+    a, .btn {
+        background-color: var(--accent-color);
+        color: #fff;
+        border: none;
+    }
+
+    a:hover, .btn:hover {
+        opacity: 0.9;
+    }
+
+    .card {
+        background-color: var(--card-color);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-color);
+        border-radius: 0.5rem;
+    }
+
+    .text-accent {
+        color: var(--text-accent);
+    }
+
+    .bg-light {
+        background-color: var(--card-color);
+        color: var(--text-color);
+    }
+
+    .shadow-sm {
+        box-shadow: var(--shadow-color);
+    }
+  }
+
+  footer a:hover i {
+    color: var(--accent-color); 
+    transition: color 0.3s ease;
+  }
+}
+
+/* Botón personalizado (opcional) */
+#themeToggle {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.05);
+}
