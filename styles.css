@@ -35,6 +35,12 @@ body {
 
     a:hover, .btn:hover {
         opacity: 0.9;
+        background-color: var(--accent-color);
+    }
+
+    a:active , .btn:active {
+        opacity: 0.8;
+        background-color: var(--accent-color);
     }
 
     .card {
@@ -67,14 +73,24 @@ body {
 
 /* Botón personalizado (opcional) */
 #themeToggle {
-  width: 56px;
-  height: 56px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+#themeToggle i {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
 #themeToggle:hover {
   transform: scale(1.05);
+}
+
+#themeToggle:active {
+  transform: scale(0.95);
 }
